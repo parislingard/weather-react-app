@@ -5,12 +5,12 @@ const Form = (props) => {
       <form onSubmit={props.getWeather}>
           <input
           type='text'
-          placeholder='city'
+          placeholder='City'
           name='city'
           />
           <input
           type='text'
-          placeholder='country'
+          placeholder='Country'
           name='country'
           />
           <button>Submit</button>

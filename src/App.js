@@ -20,6 +20,7 @@ function App() {
       data: apiData,
       city: apiData.city,
       country: apiData.sys.country,
+      main: apiData.weather[0].main,
       description: apiData.weather[0].description,
       temperature: Math.round(apiData.main.temp * 9/5 - 459.67),//Kelvin to Fahrenheit
       error:""
@@ -29,6 +30,7 @@ function App() {
         data: '',
         city: '',
         country: '',
+        main:'',
         description: '',
         temperature: '',
         error:"Please type in a city and country"
@@ -40,11 +42,12 @@ function App() {
   return (
     //send props to form and weather; also consoles weather data
     <div className="App">
-      <h3>What's the Weather?</h3>
+      <h1>What's the Weather?</h1>
       <Form getWeather={fetchData} />
       <Weather
       city={weather.city}
       country={weather.country}
+      main={weather.main}
       description={weather.description}
       temperature={weather.temperature}
       error={weather.error}

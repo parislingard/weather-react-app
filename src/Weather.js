@@ -13,7 +13,7 @@ const Weather = ({main, description, city, country, error, temperature }) => {
                 return <img src='https://media.giphy.com/media/3oEjHB1EKuujDjYFWw/giphy.gif' alt=""/>
 
             case "Clouds":    
-                return <img src='https://media.giphy.com/media/GFXNdR1tuMopi/giphy.gif' alt=""/>
+                return <img src='https://media.giphy.com/media/l41lQIclE3lItAlfq/giphy.gif' alt=""/>
 
             case "Drizzle":
                 return <img src='https://media.giphy.com/media/n0Zt16UrMKNFu/giphy.gif' alt=""/>

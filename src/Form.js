@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css';
 
 const Form = (props) => {
     return (
@@ -7,11 +8,6 @@ const Form = (props) => {
           type='text'
           placeholder='City'
           name='city'
-          />
-          <input
-          type='text'
-          placeholder='Country'
-          name='country'
           />
           <button>Submit</button>
       </form>  

@@ -10,16 +10,14 @@ function App() {
 
   async function fetchData(e) {
     const city = e.target.elements.city.value
-    const country = e.target.elements.country.value
       e.preventDefault()
-    const apiData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${APIKEY}`)
+    const apiData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKEY}`)
     .then(res => res.json())
     .then(data => data)
-    if(city && country){
+    if(city){
     setWeather({
       data: apiData,
       city: apiData.city,
-      country: apiData.sys.country,
       main: apiData.weather[0].main,
       description: apiData.weather[0].description,
       temperature: Math.round(apiData.main.temp * 9/5 - 459.67),//Kelvin to Fahrenheit
@@ -29,11 +27,10 @@ function App() {
       setWeather({
         data: '',
         city: '',
-        country: '',
         main:'',
         description: '',
         temperature: '',
-        error:"Please type in a city and country"
+        error:"Please type in a city"
       }
       )}
   }
@@ -46,7 +43,6 @@ function App() {
       <Form getWeather={fetchData} />
       <Weather
       city={weather.city}
-      country={weather.country}
       main={weather.main}
       description={weather.description}
       temperature={weather.temperature}

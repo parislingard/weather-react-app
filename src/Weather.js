@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Weather = ({main, description, city, country, error, temperature }) => {
+const Weather = ({main, description, city, error, temperature }) => {
     
     //function that matches weather keywords with weather
     //uses switch to match location's main weather identifier to case
@@ -13,7 +13,7 @@ const Weather = ({main, description, city, country, error, temperature }) => {
                 return <img src='https://media.giphy.com/media/3oEjHB1EKuujDjYFWw/giphy.gif' alt=""/>
 
             case "Clouds":    
-                return <img src='https://media.giphy.com/media/l41lQIclE3lItAlfq/giphy.gif' alt=""/>
+                return <img src='https://media.giphy.com/media/JOMTYlr1b2HlxGXyoS/giphy.gif' alt=""/>
 
             case "Drizzle":
                 return <img src='https://media.giphy.com/media/n0Zt16UrMKNFu/giphy.gif' alt=""/>
@@ -25,7 +25,7 @@ const Weather = ({main, description, city, country, error, temperature }) => {
                 return <img src='https://media.giphy.com/media/Xi2Xu0MejhsUo/giphy.gif' alt=""/>
 
             case "Clear":
-                return <img src='https://media.giphy.com/media/u01ioCe6G8URG/giphy.gif' alt=""/>
+                return <img src='https://media.giphy.com/media/QwtMHd2Z8dlb5FFIdq/giphy.gif' alt=""/>
 
             case "Atmosphere":
                 return <img src='https://media.giphy.com/media/ZWRCWdUymIGNW/giphy.gif' alt=""/>
@@ -52,9 +52,9 @@ const Weather = ({main, description, city, country, error, temperature }) => {
 
     return  (
         <div>
-            {city && country && <p>{city}, {country}</p>}
-            {temperature && <p>{temperature} °F</p>}
-            {description && <p> Conditions: {description}</p>}
+            {city && <p>{city}</p>}
+            {temperature && <p><strong>{temperature} °F</strong></p>}
+            {description && <p><strong>{description}</strong></p>}
             {error && <p>{error}</p>}
             {description && matchValues()}
         </div>

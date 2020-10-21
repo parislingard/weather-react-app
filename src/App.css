@@ -1,4 +1,30 @@
 .App {
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: black;
+}
+form {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+button {
+  background-color: lightgoldenrodyellow;
+  border: none;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+input {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 4px;
+  width: 120px;
+  margin: 10px;
 }

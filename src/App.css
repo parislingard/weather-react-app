@@ -1,7 +1,15 @@
+html {
+  background: url("https://wallpaperaccess.com/full/858411.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .App {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  color: black;
+  color: lightgoldenrodyellow;
 }
 form {
   color: black;
